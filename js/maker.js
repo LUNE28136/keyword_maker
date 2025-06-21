@@ -13,7 +13,7 @@ const selectSet = document.getElementById("selectSet");
 const selectSubmit = document.getElementById("selectSubmit");
 const selectReset = document.getElementById("selectReset");
 
-let selected_set = null;    //선택된 KeywordSet의 인덱스 값
+let selected_set = -1;    //선택된 KeywordSet의 인덱스 값
 
 selectForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -95,13 +95,13 @@ function showAll() {
 }
 
 function startShow() {
-    set = KeywordSet.copySet(selected_set);
-    console.log("set: ", set);
-    if (set) {
+    if (selected_set != -1) {
+        set = KeywordSet.copySet(selected_set);
+        console.log("set: ", set);
         set.shuffleKeyword();
+        styleShowText("keyword");
+        showText.textContent = "\"" + set.getTitle() + "\"";
     }
-    styleShowText("keyword");
-    showText.textContent = "\"" + set.getTitle() + "\"";
 }
 
 function endShow() {
