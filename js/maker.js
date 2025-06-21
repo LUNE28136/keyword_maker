@@ -95,7 +95,7 @@ function showAll() {
 }
 
 function startShow() {
-    if (selected_set !== -1) {
+    if (selected_set > -1) {
         set = KeywordSet.copySet(selected_set);
         console.log("set: ", set);
         set.shuffleKeyword();
@@ -107,7 +107,6 @@ function startShow() {
 function endShow() {
     styleShowText("keyword");
     showText.textContent = "keyword";
-    startShow();
 }
 
 /* 키워드 조작 영역 */
