@@ -37,12 +37,12 @@ export class KeywordSet {
     }
 
     static copySet(index) {
-        const set = new KeywordSet(
-            KeywordSet.set_list[index].getTitle(),
-            KeywordSet.set_list[index].getText()
-        );
-        console.log("set: ", set);
-        return set;
+        const origin = KeywordSet.set_list[index];
+        if (!origin) {
+            console.warn("copySet 실패: set_list에 해당 인덱스 없음", index);
+            return null;
+        }
+        return new KeywordSet(origin.getTitle(), origin.getText());
     }
 
     static removeSet(index) {
@@ -59,12 +59,10 @@ export class KeywordSet {
 
     regist() {
         KeywordSet.set_list.push(this);
-        console.log("success regist: ", this.getTitle());
     }
 
     update(index) {
         KeywordSet.set_list[index] = this;
-        console.log("success update: ", this.getTitle());
     }
 
     getTitle() {
@@ -72,7 +70,6 @@ export class KeywordSet {
     }
 
     getText() {
-        console.log("keyword: ", this.keyword);
         if (!Array.isArray(this.keyword)) return this.keyword;
         return this.keyword.map(k => String(k)).join(", ");
     }
@@ -96,7 +93,6 @@ export class KeywordSet {
 
     static saveJson() {
         localStorage.setItem("save", JSON.stringify(KeywordSet.set_list));
-        console.log("success saving: ", KeywordSet.set_list);
     }
 
     static loadJson() {

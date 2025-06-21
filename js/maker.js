@@ -97,7 +97,6 @@ function showAll() {
 function startShow() {
     if (selected_set > -1) {
         set = KeywordSet.copySet(selected_set);
-        console.log("set: ", set);
         set.shuffleKeyword();
         styleShowText("keyword");
         showText.textContent = "\"" + set.getTitle() + "\"";

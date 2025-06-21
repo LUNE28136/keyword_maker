@@ -146,7 +146,6 @@ function startModify() {
     switch (manu_select) {
         case "mod":
             const set = KeywordSet.set_list[selected_set];
-            console.log("set: ", set);
             if (set) {
                 modifyTitle.value = set.getTitle();
                 modifyText.value = set.getText();
@@ -183,8 +182,5 @@ function startDelete() {
     if (set) {
         deleteSet.classList.remove("hidden");
         deleteMessage.textContent = "\"" + set.getTitle() + "\"";
-    }
-    else {
-        console.log("set: ", set);
     }
 }
