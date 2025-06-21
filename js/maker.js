@@ -23,7 +23,7 @@ selectForm.addEventListener("submit", function (event) {
 
 selectForm.addEventListener("reset", function (event) {
     event.preventDefault();
-    selected_set = null;
+    selected_set = -1;
     set = null
     endShow();
 });
@@ -95,7 +95,7 @@ function showAll() {
 }
 
 function startShow() {
-    if (selected_set != -1) {
+    if (selected_set !== -1) {
         set = KeywordSet.copySet(selected_set);
         console.log("set: ", set);
         set.shuffleKeyword();
@@ -117,5 +117,5 @@ const controlEnd = document.getElementById("controlEnd");
 const controlAll = document.getElementById("controlAll");
 
 controlChange.addEventListener("click", () => changeKeyword());
-controlEnd.addEventListener("click", () => endShow());
+controlEnd.addEventListener("click", () => startShow());
 controlAll.addEventListener("click", () => showAll());
