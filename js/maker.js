@@ -99,9 +99,9 @@ function startShow() {
     console.log("set: ", set);
     if (set) {
         set.shuffleKeyword();
+        styleShowText("keyword");
+        showText.textContent = "\"" + set.getTitle() + "\"";
     }
-    styleShowText("keyword");
-    showText.textContent = "\"" + set.getTitle() + "\"";
 }
 
 function endShow() {
