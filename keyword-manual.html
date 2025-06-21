@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyword Manual</title>
+    <link rel="stylesheet" href="./css/keyword.css">
+</head>
+
+<body>
+    <header>
+        <h1>키워드 생성기</h1>
+        <button type="button" id="toManual">
+            <h3>사용법</h3>
+        </button>
+    </header>
+
+    <nav>
+        <button type="button" id="toMaker">
+            <h2>키워드 생성</h2>
+        </button>
+        <button type="button" id="toRegister">
+            <h2>키워드 세트</h2>
+        </button>
+        <button type="button" id="toSave">
+            <h2>저장/불러오기</h2>
+        </button>
+    </nav>
+
+    <section>
+        <div class="manual">
+            <h2>키워드 생성</h2>
+            <dl>
+                <dt>
+                    <h3>키워드 세트 선택</h3>
+                </dt>
+                <dd><label for="">콤보박스:
+                        <p>키워드 세트를 선택합니다.</p>
+                    </label></dd>
+                <dd><label for="">선택 버튼:
+                        <p>콤보박스에서 선택한 키워드 세트로 키워드 출력을 시작합니다.
+                            정상적으로 세트가 선택되었다면 세트의 이름이 출력됩니다.</p>
+                    </label></dd>
+                <dd><label for="">초기화 버튼:
+                        <p>선택을 취소하고 화면을 초기화합니다.</p>
+                    </label></dd>
+
+                <dt>
+                    <h3>키워드 조작</h3>
+                </dt>
+                <dd><label for="">키워드 변경:
+                        <p>선택한 세트의 키워드를 랜덤으로 출력합니다.
+                            모든 키워드를 출력하면 키워드가 출력되지 않습니다.</p>
+                    </label></dd>
+                <dd><label for="">다시 시작:
+                        <p>출력되었던 키워드도 다시 출력될 수 있도록
+                            세트가 선택된 직후의 상태로 되돌립니다.</p>
+                    </label></dd>
+                <dd><label for="">모두보기:
+                        <p>선택한 세트의 모든 키워드를 출력합니다.</p>
+                    </label></dd>
+            </dl>
+        </div>
+
+        <div class="manual">
+            <h2>키워드 세트</h2>
+            <dl>
+                <dt>
+                    <h3>키워드 세트 관리</h3>
+                </dt>
+                <dd><label for="">세트 등록:
+                        <p>새 키워드 세트를 등록합니다.</p>
+                    </label></dd>
+                <dd><label for="">세트 수정:
+                        <p>기존 키워드 세트를 수정합니다.</p>
+                    </label></dd>
+                <dd><label for="">세트 삭제:
+                        <p>키워드 세트를 삭제합니다.</p>
+                    </label></dd>
+
+                <dt>
+                    <h3>키워드 세트 편집</h3>
+                </dt>
+                <dd><label for="">세트 이름:
+                        <p>키워드 세트의 이름을 입력받는 공간입니다.</p>
+                    </label></dd>
+                <dd><label for="">키워드 필드:
+                        <p>키워드를 입력받는 공간입니다.
+                            ','로 구분된 여러 개의 키워드를 입력받습니다.</p>
+                    </label></dd>
+                <dd><label for="">세트 저장:
+                        <p>편집한 키워드 세트를 저장합니다.
+                            이름이 공백이거나 기존 키워드 세트와 중복되는 경우,
+                            또는 키워드가 없는 경우 오류 메세지가 출력됩니다.</p>
+                    </label></dd>
+            </dl>
+        </div>
+
+        <div class="manual">
+            <h2>키워드 생성</h2>
+            <dl>
+                <dt>
+                    <h3>키워드 세트 선택</h3>
+                </dt>
+                <dd><label for="">콤보박스:
+                        <p>키워드 세트를 선택합니다.</p>
+                    </label></dd>
+                <dd><label for="">선택 버튼:
+                        <p>콤보박스에서 선택한 키워드 세트로 키워드 출력을 시작합니다.
+                            정상적으로 세트가 선택되었다면 세트의 이름이 출력됩니다.</p>
+                    </label></dd>
+                <dd><label for="">초기화 버튼:
+                        <p>선택을 취소하고 화면을 초기화합니다.</p>
+                    </label></dd>
+
+                <dt>
+                    <h3>키워드 조작</h3>
+                </dt>
+                <dd><label for="">키워드 변경:
+                        <p>선택한 세트의 키워드를 랜덤으로 출력합니다.
+                            모든 키워드를 출력하면 키워드가 출력되지 않습니다.</p>
+                    </label></dd>
+                <dd><label for="">다시 시작:
+                        <p>출력되었던 키워드도 다시 출력될 수 있도록
+                            세트가 선택된 직후의 상태로 되돌립니다.</p>
+                    </label></dd>
+                <dd><label for="">모두보기:
+                        <p>선택한 세트의 모든 키워드를 출력합니다.</p>
+                    </label></dd>
+            </dl>
+        </div>
+
+        <div class="manual">
+            <h2>저장/불러오기</h2>
+            <dl>
+                <dt>
+                    <h3>키워드 세트 저장</h3>
+                </dt>
+                <dd><label for="">JSON 저장:
+                        <p>현재 등록된 키워드 세트들을 json 파일로 내보냅니다.</p>
+                    </label></dd>
+
+                <dt>
+                    <h3>키워드 세트 불러오기</h3>
+                </dt>
+                <dd><label for="">파일 선택:
+                        <p>json 파일을 입력받습니다.</p>
+                    </label></dd>
+                <dd><label for="">JSON 불러오기:
+                        <p>입력받은 json 파일을 복원하여 키워드 세트를 등록합니다.
+                            기존에 등록되었던 키워드 세트들을 모두 삭제됩니다.
+                        </p>
+                    </label></dd>
+            </dl>
+        </div>
+
+        <div class="manual, hidden">
+            <h2>기타 정보</h2>
+            <dl>
+                <dt>
+                    <h3>오류제보 및 문의사항</h3>
+                </dt>
+                <dd><label for="">이메일:
+                        <p>stephaniepsh@naver.com</p>
+                    </label></dd>
+        </div>
+    </section>
+
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/keyword.js"></script>
+</body>
+
+</html>

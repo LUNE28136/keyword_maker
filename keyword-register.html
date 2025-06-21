@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyword Register</title>
+    <link rel="stylesheet" href="./css/keyword.css">
+</head>
+
+<body>
+    <header>
+        <h1>키워드 생성기</h1>
+        <button type="button" id="toManual">
+            <h3>사용법</h3>
+        </button>
+    </header>
+
+    <nav>
+        <button type="button" id="toMaker">
+            <h2>키워드 생성</h2>
+        </button>
+        <button type="button" id="toRegister" disabled>
+            <h2>키워드 세트</h2>
+        </button>
+        <button type="button" id="toSave">
+            <h2>저장/불러오기</h2>
+        </button>
+    </nav>
+
+    <section>
+        <div id="manuSet">
+            <h2>키워드 세트 관리</h2>
+            <button type="button" id="manuRegist">
+                <h3>세트 등록</h3>
+            </button>
+            <button type="button" id="manuMod">
+                <h3>세트 수정</h3>
+            </button>
+            <button type="button" id="manuDelete">
+                <h3>세트 삭제</h3>
+            </button>
+        </div>
+
+        <div id="selectKeyword">
+            <h2>키워드 세트 선택 </h2>
+            <form action="#" method="get" id="selectForm">
+                <select name="keyword_set" id="selectSet">
+                    <option value="">option</option>
+                </select>
+                <button type="submit" id="selectSubmit">
+                    <h3>선택</h3>
+                </button>
+            </form>
+        </div>
+
+        <div id="modifySet">
+            <h2>키워드 세트 편집</h2>
+            <form action="#" method="get" id="modifyForm">
+                <label for="">
+                    <h3>세트 이름:</h3> <input type="text" id="modifyTitle" placeholder="New KeywordSet">
+                </label>
+                <textarea name="set" id="modifyText" placeholder="키워드1, 키워드2, 키워드3, ..."></textarea>
+                <button type="submit" id="modifySave">
+                    <h3>세트 저장</h3>
+                </button>
+                <p id="modifyMessage">message</p>
+            </form>
+        </div>
+
+        <div id="deleteSet">
+            <h2>키워드 세트 삭제</h2>
+            <form action="#" method="get" id="deleteForm">
+                <p>정말로</p>
+                <h3 id="deleteMessage">message</h3>
+                <p>세트를 삭제하시겠습니까?</p>
+                <button type="submit" id="deleteSubmit">
+                    <h3>삭제</h3>
+                </button>
+                <button type="reset" id="deleteReset">
+                    <h3>취소</h3>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/keyword.js"></script>
+    <script type="module" src="./js/register.js"></script>
+</body>
+
+</html>

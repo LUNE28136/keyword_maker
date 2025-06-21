@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyword Maker</title>
+    <link rel="stylesheet" href="./css/keyword.css">
+</head>
+
+<body>
+    <header>
+        <h1>키워드 생성기</h1>
+        <button type="button" id="toManual">
+            <h3>사용법</h3>
+        </button>
+    </header>
+
+    <nav>
+        <button type="button" id="toMaker" disabled>
+            <h2>키워드 생성</h2>
+        </button>
+        <button type="button" id="toRegister">
+            <h2>키워드 세트</h2>
+        </button>
+        <button type="button" id="toSave">
+            <h2>저장/불러오기</h2>
+        </button>
+    </nav>
+
+    <section>
+        <div id="selectKeyword">
+            <h2>키워드 세트 선택 </h2>
+            <form action="#" method="get" id="selectForm">
+                <select name="keyword_set" id="selectSet">
+                    <option value="">option</option>
+                </select>
+                <button type="submit" id="selectSubmit">
+                    <h3>선택</h3>
+                </button>
+                <button type="reset" id="selectReset">
+                    <h3>초기화</h3>
+                </button>
+            </form>
+        </div>
+
+        <div id="showKeyword">
+            <h1 id="showText">keyword</h1>
+        </div>
+
+        <div id="controlKeyword">
+            <button type="button" id="controlChange">
+                <h3>키워드 변경</h3>
+            </button>
+            <button type="button" id="controlEnd">
+                <h3>다시 시작</h3>
+            </button>
+            <button type="button" id="controlAll">
+                <h3>모두보기</h3>
+            </button>
+        </div>
+    </section>
+
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/keyword.js"></script>
+    <script type="module" src="./js/maker.js"></script>
+</body>
+
+</html>
