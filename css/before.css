@@ -1,0 +1,192 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: "맑은 고딕", "malgun gothic",
+        "Apple SD 산돌고딕 NEO", "AppleGothicNeoSD",
+        "Microsoft NeoGothic", "Droid sans", sans-serif;
+}
+
+h1 {
+    font-size: 6vh;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+}
+
+h2 {
+    font-size: 3vh;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+}
+
+h3 {
+    font-size: 2vh;
+    font-weight: bold;
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+}
+
+label {
+    font-size: 1.5vh;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    font-size: 1.5vh;
+    font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+}
+
+button {
+    margin: 1vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: max-content;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 2vh;
+}
+
+section>div {
+    box-sizing: border-box;
+    border: 2px solid;
+    padding: 2vh;
+    width: 60vw;
+}
+
+section button {
+    width: max-content;
+}
+
+#selectForm {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: inherit;
+    height: max-content;
+}
+
+#selectKeyword select {
+    margin: 1vh;
+    width: 22vw;
+    height: max-content;
+    font-size: 2vh;
+}
+
+#showKeyword {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 30vh;
+    text-align: center;
+}
+
+#controlKeyword {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0vh;
+    height: max-content;
+}
+
+#controlKeyword button {
+    width: 18vw;
+}
+
+#modifyForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1vh;
+    height: max-content;
+}
+
+#modifyTitle {
+    align-self: flex-start;
+    margin: 1vh;
+    width: 22vw;
+    height: max-content;
+    font-size: 2vh;
+}
+
+#modifyText {
+    margin: 1vh;
+    width: 50vw;
+    min-height: 10vh;
+    resize: vertical;
+    font-size: 2vh;
+}
+
+#deleteForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1vh;
+    width: inherit;
+}
+
+#deleteSet p {
+    text-align: center;
+    margin: 1vh;
+    width: inherit;
+}
+
+#loadSet {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1vh;
+    height: max-content;
+}
+
+#jsonText {
+    margin: 1vh;
+    width: 50vw;
+    height: 20vh;
+    resize: vertical;
+    font-size: 2vh;
+}
+
+.manual dt {
+    margin: 1vh 0vw;
+}
+
+.manual dd {
+    margin: 1vh 4vw;
+}
+
+.manual p {
+    display: inline-flex;
+}

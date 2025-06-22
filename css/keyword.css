@@ -1,3 +1,6 @@
+/* 세로 모드 */
+@media (orientation: portrait) {}
+
 body {
     display: flex;
     flex-direction: column;
@@ -9,95 +12,61 @@ body {
 }
 
 h1 {
-    font-size: 6vh;
-    font-weight: bold;
     margin: 0px;
     padding: 0px;
+    font-weight: bold;
 }
-
 h2 {
-    font-size: 3vh;
-    font-weight: bold;
     margin: 0px;
     padding: 0px;
-}
-
-h3 {
-    font-size: 2vh;
     font-weight: bold;
+}
+h3 {
     display: inline;
     margin: 0px;
     padding: 0px;
-}
-
-label {
-    font-size: 1.5vh;
     font-weight: bold;
+}
+label {
     margin: 0px;
     padding: 0px;
+    font-weight: bold;
 }
-
 p {
-    font-size: 1.5vh;
-    font-weight: normal;
     margin: 0px;
     padding: 0px;
+    font-weight: normal;
 }
 
-button {
-    margin: 1vh;
-}
+button {height: max-content;}
 
-.hidden {
-    display: none !important;
-}
+.hidden {display: none !important;}
 
 header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 1vh;
 }
-
 nav {
     display: flex;
     justify-content: space-around;
-    width: max-content;
 }
 
 section {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    margin: 2vh;
 }
-
 section>div {
     box-sizing: border-box;
     border: 2px solid;
-    padding: 2vh;
-    width: 60vw;
-}
-
-section button {
-    width: max-content;
 }
 
 #selectForm {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
-    width: inherit;
-    height: max-content;
-}
-
-#selectKeyword select {
-    margin: 1vh;
-    width: 22vw;
-    height: max-content;
-    font-size: 2vh;
 }
 
 #showKeyword {
@@ -105,7 +74,6 @@ section button {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 30vh;
     text-align: center;
 }
 
@@ -113,13 +81,6 @@ section button {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    padding: 0vh;
-    height: max-content;
-}
-
-#controlKeyword button {
-    width: 18vw;
 }
 
 #modifyForm {
@@ -127,39 +88,21 @@ section button {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 1vh;
-    height: max-content;
 }
-
-#modifyTitle {
-    align-self: flex-start;
-    margin: 1vh;
-    width: 22vw;
-    height: max-content;
-    font-size: 2vh;
-}
-
-#modifyText {
-    margin: 1vh;
-    width: 50vw;
-    min-height: 10vh;
-    resize: vertical;
-    font-size: 2vh;
-}
+#modifyTitle {align-self: flex-start;}
+#modifyText {resize: vertical;}
 
 #deleteForm {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 1vh;
-    width: inherit;
 }
-
-#deleteSet p {
-    text-align: center;
-    margin: 1vh;
-    width: inherit;
+#deleteSet p {text-align: center;}
+#deleteButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #loadSet {
@@ -167,26 +110,135 @@ section button {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 1vh;
-    height: max-content;
+}
+#jsonText {resize: vertical;}
+
+.manual p {display: inline-flex;}
+
+/* 가로 모드 */
+@media (orientation: landscape) {
+    h1 {font-size: 4vw;}
+    h2 {font-size: 2vw;}
+    h3 {font-size: 1.5vw;}
+    label {font-size: 1.2vw;}
+    p {font-size: 1vw;}
+
+    button {margin: 0.5vw;}
+
+    header {margin: 0.5vw;}
+    nav {margin: 0.5vw;}
+    nav>button {width: 15vw;}
+    
+    section {
+        margin: 0.5vw;
+        width: 50vw;
+    }
+    section>div {
+        padding: 1vw;
+        width: 50vw;
+    }
+
+    #selectKeyword select {
+        margin: 0.5vw;
+        width: 15vw;
+        font-size: 1.5vw;
+    }
+
+    #showKeyword {height: 25vh;}
+
+    #controlKeyword {padding: 0.5vw;}
+    #controlKeyword button {width: 15vw;}
+
+    #modifyTitle {
+        margin: 0.5vw;
+        width: 15vw;
+        font-size: 1.2vw;
+    }
+    #modifyText {
+        margin: 0.5vw;
+        width: 40vw;
+        min-height: 10vh;
+        font-size: 1vw;
+    }
+
+    #deleteSet p {
+        margin: 0.5vw;
+        width: 40vw;
+    }
+
+    #loadSet {margin: 0.5vw;}
+    #jsonText {
+        margin: 0.5vw;
+        width: 40vw;
+        height: 20vh;
+        font-size: 1vw;
+    }
+
+    .manual dt {margin: 0.5vw 0vw;}
+    .manual dd {margin: 0.5vw 2vw;}
 }
 
-#jsonText {
-    margin: 1vh;
-    width: 50vw;
-    height: 20vh;
-    resize: vertical;
-    font-size: 2vh;
-}
+/* 세로 모드 */
+@media (orientation: portrait) {
+    h1 {font-size: 10vw;}
+    h2 {font-size: 4vw;}
+    h3 {font-size: 3vw;}
+    label {font-size: 3vw;}
+    p {font-size: 2.5vw;}
 
-.manual dt {
-    margin: 1vh 0vw;
-}
+    button {margin: 1vw;}
 
-.manual dd {
-    margin: 1vh 4vw;
-}
+    header {margin: 1vw;}
+    nav {margin: 1vw;}
+    nav>button {width: 30vw;}
 
-.manual p {
-    display: inline-flex;
+    section {
+        margin: 1vw;
+        width: 90vw;
+    }
+    section>div {
+        padding: 2vw;
+        width: 90vw;
+    }
+
+    #selectKeyword select {
+        margin: 1vw;
+        width: 30vw;
+        font-size: 3vw;
+    }
+
+    #showKeyword {height: 30vh;}
+
+    #controlKeyword {padding: 1vw;}
+    #controlKeyword button {width: 25vw;}
+
+    #modifyTitle {
+        margin: 1vw;
+        width: 20vw;
+        font-size: 3vw;
+    }
+    #modifyText {
+        margin: 1vw;
+        width: 60vw;
+        min-height: 20vh;
+        font-size: 3vw;
+    }
+
+    #deleteSet p {
+        margin: 1vw;
+        width: 60vw;
+    }
+
+    #loadSet {
+        margin: 1vw;
+    }
+    #jsonText {
+        margin: 1vh;
+        width: 60vw;
+        height: 20vh;
+        font-size: 2.5vw;
+    }
+
+    .manual dt {margin: 0.5vw 0vw;}
+    .manual dd {margin: 0.5vw 4vw;}
 }
